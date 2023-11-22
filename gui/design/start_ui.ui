@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>APFS Tool</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPushButton" name="NewFileButton">
+     <property name="text">
+      <string>New analysis</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="ExistFileButton">
+     <property name="text">
+      <string>Previous result (SQLite3 DB and APFS File)</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>NewFileButton</tabstop>
+  <tabstop>ExistFileButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>NewFileButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>open_new_file</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ExistFileButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>open_existent_file</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>184</x>
+     <y>224</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>open_new_file()</slot>
+  <slot>open_existent_file()</slot>
+ </slots>
+</ui>
